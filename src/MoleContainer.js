@@ -1,6 +1,7 @@
 import Mole from "./Mole"
 import EmptySlot from "./EmptySlot"
 import { useState } from 'react'
+import './App.css'
 
 function MoleContainer(props) {
     let [displayMole, setDisplayMole] = useState(false)
@@ -11,7 +12,7 @@ function MoleContainer(props) {
     }
 
     return (
-        <div>
+        <div className="mole-container">
             {displayMole ? <Mole displayMole={displayMole} setDisplayMole={setDisplayMole} hitMole={hitMole}/> : <EmptySlot displayMole={displayMole} setDisplayMole={setDisplayMole}/>}
         </div>
     )
