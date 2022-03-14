@@ -12,8 +12,7 @@ function MoleContainer(props) {
 
     return (
         <div>
-            <h2 onClick={() => displayMole ? hitMole() : null}>Mole Container</h2>
-            {displayMole ? <Mole /> : <EmptySlot />}
+            {displayMole ? <Mole displayMole={displayMole} setDisplayMole={setDisplayMole} hitMole={hitMole}/> : <EmptySlot displayMole={displayMole} setDisplayMole={setDisplayMole}/>}
         </div>
     )
 }
